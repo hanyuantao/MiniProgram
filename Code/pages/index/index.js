@@ -15,6 +15,22 @@ Page({
       url: '../logs/logs'
     })
   },
+  
+  scanTap:function(){
+    wx.scanCode({
+      success:(res)=> {
+        console.log(res);
+      }
+    })
+    // wx.getLocation({
+    //   type:'wgs84',
+    //   success: function (res) {
+    //     console.log(res.latitude);
+    //     console.log(res.longitude);
+    //   },
+    // })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -43,6 +59,7 @@ Page({
       })
     }
   },
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -51,4 +68,5 @@ Page({
       hasUserInfo: true
     })
   }
+
 })

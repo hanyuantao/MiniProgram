@@ -9,5 +9,8 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <map longitude="123.169" latitude="80.66"></map>
+    <button bindtap="scanTap"> 扫一扫 </button>
   </view>
+  
 </view>
