@@ -35,6 +35,18 @@ App({
     })
 
   },
+  onShow: function (options) {
+    // Do something when show.
+    console.log("show");
+    console.table(options.path)
+  },
+  onHide: function () {
+    // Do something when hide.
+    console.log("hide");
+  },
+  onError: function (msg) {
+    console.log("error");
+  },
   globalData: {
     userInfo: null
   }

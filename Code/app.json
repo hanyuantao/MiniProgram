@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -15,15 +16,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "发现"
+        "text": "发现",
+        "iconPath":"resource/compass.png",
+        "selectedIconPath":"resource/compass-select.png"
       },
       {
         "pagePath": "pages/message/message",
-        "text": "消息"
+        "text": "消息",
+        "iconPath": "resource/favorites.png",
+        "selectedIconPath": "resource/favorites-select.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "resource/user.png",
+        "selectedIconPath": "resource/user-select.png"
       }
     ]
   },

@@ -7,8 +7,10 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    dataArray:['1','2','3']
   },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -32,6 +34,7 @@ Page({
   },
 
   onLoad: function () {
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -61,12 +64,20 @@ Page({
   },
 
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
 
+  /**
+ * 用户点击右上角分享
+ */
+  onShareAppMessage: function () {
+    return{
+      title:'爱分不分',
+      path:'baidu.com'
+    }
+  }
 })
