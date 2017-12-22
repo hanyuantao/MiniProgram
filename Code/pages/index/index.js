@@ -19,11 +19,14 @@ Page({
   },
   
   scanTap:function(){
+    var app = getApp();
+    console.log(app.gloaleData);
     wx.scanCode({
       success:(res)=> {
-        console.log(res);
+
       }
     })
+
     // wx.getLocation({
     //   type:'wgs84',
     //   success: function (res) {

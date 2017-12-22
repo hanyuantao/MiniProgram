@@ -1,0 +1,21 @@
+<view class='liveContainer'>
+  <button bindtap="changeNameTap"></button>
+  <label class='rankTitle'>{{name}}</label>
+  <!-- <view wx:for="{{teamList}}">{{item.team}}</view> -->
+
+  <!-- //条件语句 -->
+  <!-- <view wx:if="{{name== 'FCB'}}">巴萨</view>
+    <view wx:elif="{{name == 'ATM'}}">马竞</view>
+    <view wx:else="{{name == 'RMD'}}">皇马</view> -->
+
+  <template name="TeamCell">
+    <view class='teamCell'>
+      <label class='team'>{{team}}</label> <label class='rank'>{{rank}}</label>
+    </view>
+  </template>
+
+  <template is="TeamCell" data="{{...teamA}}"></template>
+  <template is="TeamCell" data="{{...teamB}}"></template>
+  <template is="TeamCell" data="{{...teamC}}"></template>
+
+</view>

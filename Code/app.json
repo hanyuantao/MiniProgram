@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/message/message",
+    "pages/live/live",
     "pages/me/me"
   ],
   "window": {
@@ -16,13 +16,13 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "发现",
+        "text": "首页",
         "iconPath":"resource/compass.png",
         "selectedIconPath":"resource/compass-select.png"
       },
       {
-        "pagePath": "pages/message/message",
-        "text": "消息",
+        "pagePath": "pages/live/live",
+        "text": "现场",
         "iconPath": "resource/favorites.png",
         "selectedIconPath": "resource/favorites-select.png"
       },
