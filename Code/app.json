@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
+    "pages/me/me",
     "pages/live/live",
-    "pages/me/me"
+    "pages/index/index",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -15,6 +15,12 @@
   "tabBar": {
     "list": [
       {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "resource/user.png",
+        "selectedIconPath": "resource/user-select.png"
+      },
+      {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath":"resource/compass.png",
@@ -25,12 +31,6 @@
         "text": "现场",
         "iconPath": "resource/favorites.png",
         "selectedIconPath": "resource/favorites-select.png"
-      },
-      {
-        "pagePath": "pages/me/me",
-        "text": "我的",
-        "iconPath": "resource/user.png",
-        "selectedIconPath": "resource/user-select.png"
       }
     ]
   },

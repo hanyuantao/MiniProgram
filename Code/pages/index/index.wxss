@@ -17,5 +17,86 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 20px;
 }
+
+.templeCell {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+
+.bigView {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  background-color: #100;
+  width: 375px;
+  height: 80px;
+}
+
+.smallView_blue {
+  background-color: #0F0;
+  flex-grow: 1;
+  height: 80px;
+  text-align: center;
+}
+
+.smallView_red {
+  background-color: #F00;
+  flex-grow: 1;
+  height: 80px;
+  text-align: center;
+}
+
+.smallView_yellow {
+  background-color: #00F;
+   flex-grow: 1;
+   height: 80px;
+   text-align: center;
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.section_title{
+  display: flex;
+  color: #111
+}
+
+.scroll-view-item.bc_green{
+    background-color: #0f0;
+    /* flex-grow: 1; */
+    height: 50px;
+    width: 375px;
+}
+
+.scroll-view-item.bc_red{
+    background-color: #f00;
+    height: 50px;
+    width: 375px;
+}
+
+.scroll-view-item.bc_yellow{
+    background-color: #ff0;
+    /* flex-grow: 1; */
+    height: 50px;
+    width: 375px;
+}
+
+.scroll-view-item.bc_blue{
+    background-color: #0F0;
+    /* flex-grow: 1; */
+    height: 50px;
+    width: 375px;
+}
+
+@import "/utils/common.wxss"

@@ -1,0 +1,6 @@
+ <template name="TEAM">
+    <view class='templeCell'>
+      <button>icon</button>
+      <text>名称</text>
+    </view>
+  </template>
