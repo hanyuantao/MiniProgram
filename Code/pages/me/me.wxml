@@ -20,3 +20,193 @@
 <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
 <button bindtap="addNumberToFront"> Add to the front </button>
 -->
+
+<!-- <view>
+<text class="header">图标</text>
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="30"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="30" color='{{item}}'/>
+  </block>
+</view>
+
+</view> -->
+
+<!-- <view>
+<text class="header">TEXT</text>
+<view>
+<text selectable='true'>{{text}}</text>
+<button bindtap='add'>Add Line</button>
+<button bindtap='remove'>Remove Line</button>
+</view>
+</view>
+ -->
+
+<!-- <view>
+<text class="header">RICHTEXT</text>
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+</view> -->
+
+
+<!-- <view>
+<text class="header">Progress</text>
+<view style='padding-top:10px'>
+<progress percent='80' show-info></progress>
+<progress percent="40" stroke-width="12" active='true'/>
+<progress percent="60" color="pink" />
+<progress percent="80" active />
+</view>
+</view> -->
+
+
+<!-- <view>
+<text class="header">BUTTON</text>
+<view style='padding-top:10px'>
+ <button size='default' type='warn' plain open-type='getUserInfo' bindgetphonenumber='getphoneNO'>按钮</button>
+
+</view>
+</view> -->
+
+<!-- 
+<view>
+  <text class="header">CheckBox</text>
+  <view style='padding-top:10px'>
+  <checkbox-group bindchange="checkboxChange">
+      <label wx:for="{{checkItems}}" class='checkbox'>
+        <checkbox value='{{item.name}}' checked='{{item.checked}}'></checkbox>
+        {{item.value}}
+      </label>
+    </checkbox-group>
+  </view>
+</view> -->
+
+<!-- <view>
+  <text class="header">Form</text>
+  <view style='padding-top:10px'>
+    <form bindsubmit='formSubmit' bindreset='formReset'>
+      
+      <view style='padding-top:10px'>
+        <text>switch</text>
+        <switch name="switch"></switch>
+      </view>
+
+      <view style='padding-top:20px ;'>
+      <text>silder</text>
+      <slider value='50' name="slider" show-value></slider>
+      </view>
+
+      <view style='padding-top:20px ;'>
+      <text>Input</text>
+      <input name="input" placeholder='请输入内容'></input>
+      </view>
+
+      <view style='padding-top:20px ;'>
+        <text>Ridio</text>
+        <radio-group name="radio-group">
+          <label><radio value=' man'>男生</radio></label>
+          <label><radio value=' woman'>女生</radio></label>
+        </radio-group>
+      </view>
+
+      <view style='padding-top:20px ;'>
+        <text>CheckBox</text>
+        <checkbox-group name="checkBox">
+          <label><checkbox value='Reading'/>阅读</label>
+          <label><checkbox value='Music'/>音乐</label>
+          <label><checkbox value='Sport'/>运动</label>
+        </checkbox-group>
+      </view>
+
+      <button form-type='submit'>提交</button>
+      <button form-type='reset'>重置</button>
+
+    </form>
+  </view>
+</view>  -->
+
+<!-- <view>
+  <text class="header">Input</text>
+  <view style='padding-top:10px'>
+  <input placeholder='输入框' bindinput='handleInput'/>
+  </view>
+</view> -->
+
+ <!-- <view>
+  <text class="header">Input</text>
+  <view style='padding-top:10px'>
+  <label>
+    <checkbox value='check'>测试1</checkbox>
+    <checkbox value='check'>测试2</checkbox>
+  </label>
+  </view>
+</view>  -->
+
+<!--
+<view>
+  <text class="header">Input</text>
+  <view style='padding-top:10px'>    
+    <picker mode = "selector" value="{{index}}" range="{{checkItems}}" bindchange='changePickerData' range-key='value'>
+      <view class="picker">
+        普通-当前选择：{{checkItems[index].value}}
+      </view>
+  </picker>
+  </view>
+
+  <view style='padding-top:10px'>    
+    <picker mode = "multiSelector" value="{{multiIndex}}" range="{{multyItems}}" bindchange='bindMultiPickerChange' bindcolumnchange="bindMultiPickerColumnChange">
+      <view class="picker">
+        多列选择器-当前选择：{{multyItems[0][multiIndex[0]]}}，{{multyItems[1][multiIndex[1]]}}
+      </view>
+  </picker>
+  </view>
+
+ <view style='padding-top:10px'>    
+    <picker mode = "date" value="{{date}}" start="2015-09-01" end="2017-09-01" fields="month" bindchange="bindDateChange">
+      <view class="picker">
+        日期选择器-当前日期：{{date}}
+      </view>
+  </picker>
+  </view>
+
+  <view style='padding-top:10px'>    
+    <picker mode = "region" value="{{region}}" custom-item="XXX" bindchange="bindRegionChange">
+      <view class="picker">
+        地区选择器-当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+  </picker>
+  </view>
+
+</view>
+-->
+
+
+  <view>
+  <text class="header">Picker-View</text>
+  <view style='padding-top:10px'>
+    <view style=' display: flex;flex-direction: row;justify-content: center;align-items: center;'>{{year}}年{{month}}月{{day}}日</view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;padding-top:10px" value="{{value}}" bindchange="bindPickerViewChange">
+        
+        <picker-view-column>
+          <view wx:for="{{years}}" wx:key="this*" style="line-height: 50px">{{item}}年</view>
+        </picker-view-column>
+
+        <picker-view-column>
+          <view wx:for="{{months}}" wx:key="this*" style="line-height: 50px">{{item}}月</view>
+       </picker-view-column>
+
+       <picker-view-column>
+          <view wx:for="{{days}}" wx:key="this*" style="line-height: 50px">{{item}}日</view>
+        </picker-view-column>
+        
+       </picker-view>        
+  </view>
+</view>  

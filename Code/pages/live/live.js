@@ -16,4 +16,5 @@ Page({
         name: team.printRankList("巴塞罗那"),
       })
     }
+    
 })
