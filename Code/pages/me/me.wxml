@@ -189,7 +189,7 @@
 -->
 
 
-  <view>
+<!-- <view>
   <text class="header">Picker-View</text>
   <view style='padding-top:10px'>
     <view style=' display: flex;flex-direction: row;justify-content: center;align-items: center;'>{{year}}年{{month}}月{{day}}日</view>
@@ -209,4 +209,88 @@
         
        </picker-view>        
   </view>
-</view>  
+</view>   -->
+
+
+ <!-- <view>
+  <text class="header">Radio</text>
+  <view style='padding-top:10px'>
+  <radio-group class="radioGroup" bindchange="changeRadio">
+    <label wx:for="{{checkItems}}" wx:key="item.name">
+        <radio value='{{item.value}}'></radio>  {{item.value}}
+    </label>
+  </radio-group>
+  </view>
+</view>  -->
+
+
+
+ <!-- <view>
+  <text class="header">Slider</text>
+  <view style='padding-top:10px'>
+  <text style='padding-bottom:10px'>阅读进度</text>
+      <slider min='0' max='100' value='20' step='10' backgroundColor='#000' activeColor='#FE0' show-value	bindchange='sliderChange'></slider>
+  </view>
+</view>   -->
+
+
+<!-- <view>
+  <text class="header">Switch</text>
+  <view style='padding-top:10px'>
+  <text style='padding-bottom:10px'>是否提醒</text>
+      <switch type='checkbox'></switch>
+      <switch type='switch' color='#ff6' checked="true"></switch>
+  </view>
+</view> -->
+
+
+<!--Image 使用
+  -->
+
+ <!-- <view>
+  <text class="header">Image</text>
+  <view style='padding-top:10px'>
+
+    <view wx:for="{{imageArray}}" style='padding-top:10px'>
+      <view>{{item.text}}</view>
+      <view>
+        <image src='http://www.squawka.com/news/wp-content/uploads/2018/01/dzeko-line-ups.jpg'
+      style='width: 200px; height: 200px;background-color: #eeeeee;'
+      mode='{{item.mode}}'
+        />
+      </view>
+    </view>
+  </view>
+</view>  -->
+
+<!-- 《Video》 -->
+
+ <!-- <view>
+  <text class="header">video</text>
+  <view style='padding-top:10px'>
+    <video src='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400'
+    style='width:100%,height:200' controls='false' danmu-btn='true'  objectFit='fill' poster='https://wx4.sinaimg.cn/mw690/47481d23ly1fnxjtio8fdj20eb0c9mya.jpg'
+    >
+    </video>
+  </view>
+</view> -->
+
+
+  <!-- <view>
+  <text class="header">Map</text>
+  <view style='padding-top:10px'>
+  <map id="map" 
+  longitude="113.024520" 
+  latitude="23.099994" 
+  scale="14" 
+  controls="{{controls}}" 
+  bindcontroltap="controltap" 
+  markers="{{markers}}" 
+  bindmarkertap="markertap" 
+  polyline="{{polyline}}" 
+  bindregionchange="regionchange" 
+  show-location 
+  style="width: 100%; height: 400px;">
+  </map>
+  </view>
+</view>  -->

@@ -68,7 +68,7 @@ Page({
       { name: "USA", value: "美国" },
       { name: "CHN", value: "中国" },
       { name: "BRA", value: "巴西" },
-      { name: "JPN", value: " 日本" },
+      { name: "JPN", value: "日本" },
     ],
     multyItems: [['美国', '中国', '巴西', '日本'],["洛杉矶","北京","圣保罗","东京"]],
     index: 0,
@@ -83,7 +83,64 @@ Page({
     days: days,
     day: 2,
     year: date.getFullYear(),
-    value: [9999, 1, 1]
+    value: [9999, 1, 1],
+    imageArray: [{
+      mode: 'scaleToFill',
+      text: 'scaleToFill：不保持纵横比缩放图片，使图片完全适应'
+    }, {
+      mode: 'aspectFit',
+      text: 'aspectFit：保持纵横比缩放图片，使图片的长边能完全显示出来'
+    }, {
+      mode: 'aspectFill',
+      text: 'aspectFill：保持纵横比缩放图片，只保证图片的短边能完全显示出来'
+    }, {
+      mode: 'top',
+      text: 'top：不缩放图片，只显示图片的顶部区域'
+    }, {
+      mode: 'bottom',
+      text: 'bottom：不缩放图片，只显示图片的底部区域'
+    }, {
+      mode: 'center',
+      text: 'center：不缩放图片，只显示图片的中间区域'
+    }, {
+      mode: 'left',
+      text: 'left：不缩放图片，只显示图片的左边区域'
+    }, {
+      mode: 'right',
+      text: 'right：不缩放图片，只显示图片的右边边区域'
+    }, {
+      mode: 'top left',
+      text: 'top left：不缩放图片，只显示图片的左上边区域'
+    }, {
+      mode: 'top right',
+      text: 'top right：不缩放图片，只显示图片的右上边区域'
+    }, {
+      mode: 'bottom left',
+      text: 'bottom left：不缩放图片，只显示图片的左下边区域'
+    }, {
+      mode: 'bottom right',
+      text: 'bottom right：不缩放图片，只显示图片的右下边区域'
+    }],
+    polyline: [{
+      points: [{
+        longitude: 113.3245211,
+        latitude: 23.10229
+      }, {
+        longitude: 113.324520,
+        latitude: 23.21229
+      }],
+      color: "#FF0000DD",
+      width: 2,
+      dottedLine: true
+    }],
+    markers: [{
+      iconPath: "/resources/others.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
   },
 
   switch: function (e) {
@@ -183,6 +240,17 @@ Page({
       month: this.data.months[val[1]],
       day: this.data.days[val[2]]
     })
-  }
+  },
+
+  changeRadio:function(e){
+    console.log('radio发生change事件，携带value值为：', e.detail)
+  },
+  
+  sliderChange:function(e) {
+    console.log('Slider发生change事件，携带value值为：', e.detail)
+  },
+
+
+
 
 })
